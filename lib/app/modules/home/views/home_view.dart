@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:test_cli/app/routes/app_pages.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -13,9 +14,11 @@ class HomeView extends GetView<HomeController> {
         centerTitle: true,
       ),
       body: Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
+        child: ElevatedButton(
+          child: Text("Go To Products >>"),
+          onPressed: () {
+            Get.toNamed(Routes.PRODUCTS);
+          },
         ),
       ),
     );
